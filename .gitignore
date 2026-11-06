@@ -1,3 +1,8 @@
 .env
 Thumbs.db
 .DS_Store
+
+*.xlsx
+.vscode/
+node_modules/
+REQUISITOS_DE_PROMPT.md

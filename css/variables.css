@@ -1,0 +1,58 @@
+:root {
+  color-scheme: light;
+  --color-fondo: #F0EFE9;
+  --color-superficie: #FFFFFF;
+  --color-campo: #FFFFFF;
+  --color-texto: #343E44;
+  --color-texto-suave: #5A666D;
+  --color-borde: #DAD8CE;
+  --color-borde-fuerte: #858F95;
+  --color-boton: #4F7A2E;
+  --color-boton-hover: #3F6325;
+  --color-boton-texto: #FFFFFF;
+  --color-enlace: #3F6325;
+  --color-foco: #1F5F99;
+  --color-exito: #3F6325;
+  --color-error-fondo: #FDECF0;
+  --color-error-texto: #A61E45;
+  --color-error-borde: #F66F8D;
+  --degradado-inicio: #36561F;
+  --degradado-fin: #4F7A2E;
+  --sombra-tarjeta: 0 12px 32px rgba(52, 62, 68, 0.14);
+  --sombra-contenedor: 0 24px 60px rgba(52, 62, 68, 0.22);
+  --radio-chico: 10px;
+  --radio-medio: 18px;
+  --radio-grande: 28px;
+  --espacio-1: 0.25rem;
+  --espacio-2: 0.5rem;
+  --espacio-3: 0.75rem;
+  --espacio-4: 1rem;
+  --espacio-5: 1.5rem;
+  --espacio-6: 2rem;
+  --espacio-8: 3rem;
+  --fuente: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+[data-tema="oscuro"] {
+  color-scheme: dark;
+  --color-fondo: #1B2124;
+  --color-superficie: #2A3338;
+  --color-campo: #222A2E;
+  --color-texto: #F0EFE9;
+  --color-texto-suave: #B6BEC2;
+  --color-borde: #3C484E;
+  --color-borde-fuerte: #7C878D;
+  --color-boton: #8DBF63;
+  --color-boton-hover: #A3D07C;
+  --color-boton-texto: #14200B;
+  --color-enlace: #A3D07C;
+  --color-foco: #8EC3F2;
+  --color-exito: #A3D07C;
+  --color-error-fondo: #3A2029;
+  --color-error-texto: #FFB3C4;
+  --color-error-borde: #F66F8D;
+  --degradado-inicio: #1E2D12;
+  --degradado-fin: #2F4A1B;
+  --sombra-tarjeta: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --sombra-contenedor: 0 24px 60px rgba(0, 0, 0, 0.55);
+}

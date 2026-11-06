@@ -1,0 +1,80 @@
+.pagina-login {
+  display: grid;
+  place-items: center;
+  padding: var(--espacio-4);
+}
+
+.login {
+  position: relative;
+  display: grid;
+  gap: var(--espacio-5);
+  width: 100%;
+  max-width: 960px;
+  padding: var(--espacio-5);
+  overflow: hidden;
+  border-radius: var(--radio-grande);
+  background: linear-gradient(135deg, var(--degradado-inicio), var(--degradado-fin));
+  box-shadow: var(--sombra-contenedor);
+}
+
+.login::before,
+.login::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.login::before { top: -110px; left: -90px; width: 300px; height: 300px; }
+.login::after { right: -70px; bottom: -90px; width: 220px; height: 220px; }
+
+.login__bienvenida,
+.login__tarjeta { position: relative; z-index: 1; }
+
+.login__bienvenida {
+  display: grid;
+  gap: var(--espacio-3);
+  color: #FFFFFF;
+}
+
+.login__logo { width: 140px; height: auto; }
+.login__bienvenida h1 { font-size: 1.75rem; line-height: 1.2; }
+.login__bienvenida p { max-width: 28ch; }
+
+.login__tarjeta {
+  padding: var(--espacio-5);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-medio);
+  background: var(--color-superficie);
+  box-shadow: var(--sombra-tarjeta);
+}
+
+.formulario { display: grid; gap: var(--espacio-4); }
+.formulario__titulo { font-size: 1.4rem; }
+.formulario__texto,
+.formulario__ayuda { color: var(--color-texto-suave); font-size: 0.9rem; }
+
+.requisitos {
+  display: grid;
+  gap: var(--espacio-1);
+  font-size: 0.85rem;
+  color: var(--color-texto-suave);
+}
+
+.requisitos li::before { content: "○ "; }
+.requisitos li[data-cumple="true"] { color: var(--color-exito); }
+.requisitos li[data-cumple="true"]::before { content: "✓ "; }
+
+@media (min-width: 880px) {
+  .login {
+    grid-template-columns: 1fr minmax(360px, 420px);
+    align-items: center;
+    gap: var(--espacio-8);
+    padding: var(--espacio-8);
+  }
+
+  .login__bienvenida { padding-left: var(--espacio-4); }
+  .login__bienvenida h1 { font-size: 2.5rem; }
+  .login__logo { width: 170px; }
+}

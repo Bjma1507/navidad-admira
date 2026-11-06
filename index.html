@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es" data-tema="claro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navidad-Admira</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/login.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/sesion.js" defer></script>
+  <script src="js/api.js" defer></script>
+  <script src="js/tema.js" defer></script>
+  <script src="js/dom.js" defer></script>
+  <script src="js/login.js" defer></script>
+</head>
+<body class="pagina-login">
+  <button id="boton-tema" class="boton-tema" type="button" aria-label="Cambiar a tema oscuro">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/>
+    </svg>
+  </button>
+
+  <main class="login">
+    <section class="login__bienvenida" aria-labelledby="titulo-bienvenida">
+      <img class="login__logo" src="assets/admira-logo_white.svg" alt="ADMIRA" width="170" height="43">
+      <h1 id="titulo-bienvenida">Posada de Navidad</h1>
+      <p>Propón, comenta y vota. Entre todos elegimos.</p>
+    </section>
+
+    <section class="login__tarjeta">
+      <form id="formulario-login" class="formulario" novalidate>
+        <h2 class="formulario__titulo">Iniciar sesión</h2>
+        <p class="formulario__texto">Usa tu correo ADMIRA y la clave que te entregaron.</p>
+        <div class="campo">
+          <label for="correo">Correo</label>
+          <input id="correo" name="correo" type="email" autocomplete="username" inputmode="email" maxlength="120" required>
+        </div>
+        <div class="campo">
+          <label for="clave">Clave</label>
+          <div class="campo__clave">
+            <input id="clave" name="clave" type="password" autocomplete="current-password" maxlength="128" required>
+            <button class="campo__alternar" type="button" data-objetivo="clave" aria-label="Mostrar clave">Mostrar</button>
+          </div>
+        </div>
+        <p id="mensaje-login" class="mensaje" role="alert" hidden></p>
+        <button class="boton" type="submit">Entrar</button>
+        <p class="formulario__ayuda">¿Olvidaste tu clave? Pídesela al administrador.</p>
+      </form>
+
+      <form id="formulario-clave" class="formulario" novalidate hidden>
+        <h2 class="formulario__titulo">Crea tu clave</h2>
+        <p class="formulario__texto">Es tu primer acceso: cambia la clave temporal por una personal.</p>
+        <div class="campo">
+          <label for="claveActual">Clave temporal</label>
+          <div class="campo__clave">
+            <input id="claveActual" name="claveActual" type="password" autocomplete="current-password" maxlength="128" required>
+            <button class="campo__alternar" type="button" data-objetivo="claveActual" aria-label="Mostrar clave">Mostrar</button>
+          </div>
+        </div>
+        <div class="campo">
+          <label for="claveNueva">Clave nueva</label>
+          <div class="campo__clave">
+            <input id="claveNueva" name="claveNueva" type="password" autocomplete="new-password" maxlength="128" aria-describedby="requisitos" required>
+            <button class="campo__alternar" type="button" data-objetivo="claveNueva" aria-label="Mostrar clave">Mostrar</button>
+          </div>
+        </div>
+        <ul id="requisitos" class="requisitos" aria-label="Requisitos de la clave nueva">
+          <li data-requisito="longitud" data-cumple="false"><span class="solo-lectores estado">Pendiente: </span>Mínimo 10 caracteres</li>
+          <li data-requisito="mayuscula" data-cumple="false"><span class="solo-lectores estado">Pendiente: </span>Una mayúscula</li>
+          <li data-requisito="minuscula" data-cumple="false"><span class="solo-lectores estado">Pendiente: </span>Una minúscula</li>
+          <li data-requisito="numero" data-cumple="false"><span class="solo-lectores estado">Pendiente: </span>Un número</li>
+        </ul>
+        <div class="campo">
+          <label for="confirmacion">Confirma la clave nueva</label>
+          <input id="confirmacion" name="confirmacion" type="password" autocomplete="new-password" maxlength="128" required>
+        </div>
+        <p id="mensaje-clave" class="mensaje" role="alert" hidden></p>
+        <button class="boton" type="submit">Guardar y entrar</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
