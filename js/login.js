@@ -36,8 +36,7 @@ function alternarVisibilidadClave(boton) {
   const campo = document.getElementById(boton.dataset.objetivo);
   const estabaVisible = campo.type === 'text';
   campo.type = estabaVisible ? 'password' : 'text';
-  boton.textContent = estabaVisible ? 'Mostrar' : 'Ocultar';
-  boton.setAttribute('aria-label', estabaVisible ? 'Mostrar clave' : 'Ocultar clave');
+  boton.setAttribute('aria-pressed', String(!estabaVisible));
 }
 
 function redirigirAlPanel() {
@@ -140,4 +139,3 @@ function iniciarLogin() {
 }
 
 document.addEventListener('DOMContentLoaded', iniciarLogin);
-

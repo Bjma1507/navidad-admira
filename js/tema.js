@@ -1,4 +1,5 @@
 const CLAVE_TEMA = 'navidad-admira-tema';
+const TEMA_POR_DEFECTO = 'oscuro';
 
 function leerTemaGuardado() {
   try {
@@ -10,10 +11,7 @@ function leerTemaGuardado() {
 
 function temaPreferido() {
   const guardado = leerTemaGuardado();
-  if (guardado === 'claro' || guardado === 'oscuro') {
-    return guardado;
-  }
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'oscuro' : 'claro';
+  return guardado === 'claro' || guardado === 'oscuro' ? guardado : TEMA_POR_DEFECTO;
 }
 
 function aplicarTema(tema) {
@@ -46,4 +44,5 @@ function iniciarTema() {
   }
 }
 
+aplicarTema(temaPreferido());
 document.addEventListener('DOMContentLoaded', iniciarTema);

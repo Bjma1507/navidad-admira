@@ -21,7 +21,9 @@
   --sombra-tarjeta: 0 12px 32px rgba(52, 62, 68, 0.14);
   --sombra-contenedor: 0 24px 60px rgba(52, 62, 68, 0.22);
   --radio-chico: 10px;
+  --radio-campo: 14px;
   --radio-medio: 18px;
+  --radio-tarjeta: 24px;
   --radio-grande: 28px;
   --espacio-1: 0.25rem;
   --espacio-2: 0.5rem;
@@ -30,7 +32,59 @@
   --espacio-5: 1.5rem;
   --espacio-6: 2rem;
   --espacio-8: 3rem;
-  --fuente: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --fuente: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --curva: cubic-bezier(0.22, 1, 0.36, 1);
+  --duracion-rapida: 0.18s;
+  --duracion: 0.32s;
+
+  --color-destello: #E8941A;
+  --color-chip-fondo: rgba(251, 176, 64, 0.18);
+  --color-chip-borde: rgba(232, 148, 26, 0.45);
+  --color-chip-texto: #7A4B04;
+  --cristal-fondo: rgba(255, 255, 255, 0.84);
+  --cristal-borde: rgba(255, 255, 255, 0.95);
+  --cristal-brillo: rgba(255, 255, 255, 0.9);
+  --color-campo-cristal: #FFFFFF;
+  --halo-foco: rgba(79, 122, 46, 0.22);
+  --degradado-boton: linear-gradient(135deg, #4F7A2E, #3F6325);
+  --sombra-boton: 0 10px 22px -6px rgba(63, 99, 37, 0.55);
+  --sombra-boton-hover: 0 16px 30px -8px rgba(63, 99, 37, 0.6);
+  --fondo-login:
+    radial-gradient(60rem 40rem at 12% 8%, rgba(104, 152, 64, 0.2), transparent 60%),
+    radial-gradient(50rem 36rem at 92% 92%, rgba(54, 134, 201, 0.16), transparent 60%),
+    radial-gradient(40rem 30rem at 85% 10%, rgba(251, 176, 64, 0.16), transparent 60%),
+    #F0EFE9;
+  --esfera-opacidad: 0.9;
+  --esfera-olive-a: #A3D07C;
+  --esfera-olive-b: #4F7A2E;
+  --esfera-oro-a: #FFD58A;
+  --esfera-oro-b: #E8941A;
+  --esfera-rosa-a: #FF9DB4;
+  --esfera-rosa-b: #D94C72;
+
+  --fondo-app:
+    radial-gradient(48rem 28rem at 0% 0%, rgba(104, 152, 64, 0.16), transparent 60%),
+    radial-gradient(40rem 28rem at 100% 100%, rgba(54, 134, 201, 0.12), transparent 60%),
+    radial-gradient(34rem 24rem at 100% 0%, rgba(251, 176, 64, 0.12), transparent 60%),
+    #F0EFE9;
+  --color-tarjeta: #FFFFFF;
+  --color-tarjeta-borde: rgba(52, 62, 68, 0.1);
+  --color-barra: rgba(255, 255, 255, 0.88);
+  --color-superior: rgba(240, 239, 233, 0.78);
+  --color-hundido: rgba(52, 62, 68, 0.07);
+  --color-acento-suave: rgba(79, 122, 46, 0.14);
+  --color-oro: #B36A07;
+  --color-oro-suave: rgba(251, 176, 64, 0.22);
+  --color-cielo: #2A6FB0;
+  --color-cielo-suave: rgba(54, 134, 201, 0.14);
+  --color-rosa: #C23B62;
+  --color-rosa-suave: rgba(246, 111, 141, 0.18);
+  --sombra-suave: 0 1px 2px rgba(52, 62, 68, 0.06), 0 10px 24px -10px rgba(52, 62, 68, 0.14);
+  --sombra-elevada: 0 2px 4px rgba(52, 62, 68, 0.08), 0 22px 40px -14px rgba(52, 62, 68, 0.24);
+  --ancho-barra: 272px;
+  --ancho-barra-contraida: 84px;
+  --alto-superior: 72px;
 }
 
 [data-tema="oscuro"] {
@@ -55,4 +109,43 @@
   --degradado-fin: #2F4A1B;
   --sombra-tarjeta: 0 12px 32px rgba(0, 0, 0, 0.45);
   --sombra-contenedor: 0 24px 60px rgba(0, 0, 0, 0.55);
+
+  --color-destello: #FBB040;
+  --color-chip-fondo: rgba(251, 176, 64, 0.14);
+  --color-chip-borde: rgba(251, 176, 64, 0.4);
+  --color-chip-texto: #FFC15E;
+  --cristal-fondo: rgba(22, 30, 34, 0.66);
+  --cristal-borde: rgba(255, 255, 255, 0.14);
+  --cristal-brillo: rgba(255, 255, 255, 0.12);
+  --color-campo-cristal: rgba(8, 12, 14, 0.5);
+  --halo-foco: rgba(141, 191, 99, 0.28);
+  --degradado-boton: linear-gradient(135deg, #A3D07C, #8DBF63);
+  --sombra-boton: 0 10px 24px -6px rgba(141, 191, 99, 0.45);
+  --sombra-boton-hover: 0 16px 32px -8px rgba(141, 191, 99, 0.55);
+  --fondo-login:
+    radial-gradient(60rem 40rem at 12% 8%, rgba(104, 152, 64, 0.28), transparent 60%),
+    radial-gradient(50rem 36rem at 92% 92%, rgba(54, 134, 201, 0.16), transparent 60%),
+    radial-gradient(40rem 30rem at 85% 10%, rgba(251, 176, 64, 0.12), transparent 60%),
+    #12181B;
+  --esfera-opacidad: 0.8;
+
+  --fondo-app:
+    radial-gradient(48rem 28rem at 0% 0%, rgba(104, 152, 64, 0.26), transparent 60%),
+    radial-gradient(40rem 28rem at 100% 100%, rgba(54, 134, 201, 0.14), transparent 60%),
+    radial-gradient(34rem 24rem at 100% 0%, rgba(251, 176, 64, 0.1), transparent 60%),
+    #12181B;
+  --color-tarjeta: #1B2327;
+  --color-tarjeta-borde: rgba(255, 255, 255, 0.08);
+  --color-barra: rgba(22, 30, 34, 0.82);
+  --color-superior: rgba(18, 24, 27, 0.72);
+  --color-hundido: rgba(255, 255, 255, 0.06);
+  --color-acento-suave: rgba(141, 191, 99, 0.16);
+  --color-oro: #FFC15E;
+  --color-oro-suave: rgba(251, 176, 64, 0.16);
+  --color-cielo: #8EC3F2;
+  --color-cielo-suave: rgba(142, 195, 242, 0.14);
+  --color-rosa: #FFB3C4;
+  --color-rosa-suave: rgba(255, 179, 196, 0.14);
+  --sombra-suave: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 24px -10px rgba(0, 0, 0, 0.5);
+  --sombra-elevada: 0 2px 4px rgba(0, 0, 0, 0.35), 0 22px 40px -14px rgba(0, 0, 0, 0.65);
 }

@@ -38,23 +38,27 @@ function formatearDinero(valor) {
 }
 
 function mostrarMensaje(elemento, texto) {
-  elemento.textContent = texto;
+  const destino = elemento.querySelector('.mensaje__texto') || elemento;
+  destino.textContent = texto;
   elemento.hidden = false;
 }
 
 function limpiarMensaje(elemento) {
-  elemento.textContent = '';
+  const destino = elemento.querySelector('.mensaje__texto') || elemento;
+  destino.textContent = '';
   elemento.hidden = true;
 }
 
 function establecerCargando(boton, cargando, textoCargando) {
+  const etiqueta = boton.querySelector('.boton__texto') || boton;
   if (cargando) {
-    boton.dataset.textoOriginal = boton.textContent;
-    boton.textContent = textoCargando;
-  } else if (boton.dataset.textoOriginal) {
-    boton.textContent = boton.dataset.textoOriginal;
+    etiqueta.dataset.textoOriginal = etiqueta.textContent;
+    etiqueta.textContent = textoCargando;
+  } else if (etiqueta.dataset.textoOriginal) {
+    etiqueta.textContent = etiqueta.dataset.textoOriginal;
   }
   boton.disabled = cargando;
+  boton.dataset.cargando = String(cargando);
   boton.setAttribute('aria-busy', String(cargando));
 }
 
